@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -24,10 +25,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -53,7 +50,44 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.my-custom-class.p-menubar {
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+}
+/* .my-custom-class.p-menubar .p-menubar-root-list {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+} */
 
+.my-custom-class.p-menubar .p-menubar-root-list .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+    font-size: 16px;
+    color: #000;
+    line-height: 22px;
+}
+.my-custom-class.p-menubar .p-menubar-root-list .p-menuitem-content .p-menuitem-link {
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+.my-custom-class.p-menubar .p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
+    color: #4b5563;
+    background: #e8e8e8;
+}
+.slider-container .slick-arrow {
+    display: none !important;
+}
+
+.slider-container h3 {
+  color: var(--base-color-brand--gray-12);
+  letter-spacing: -.054rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--background-color--background-primary);
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height:normal;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -65,4 +99,11 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media only screen and (max-width: 1024px) {
+.my-custom-class.p-menubar {
+    width: 100%;
+    justify-content: end;
+}
 }
