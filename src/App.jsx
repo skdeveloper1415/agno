@@ -12,8 +12,16 @@ import Marketing from '../src/assets/5.png';
 function App() {
 useEffect(() => {
     AOS.init({
-      duration: 1000,
-      once: true,
+      duration: 800, // animation duration
+      easing: 'ease-in-out', // animation easing
+      once: true, // whether animation should happen only once
+      offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
     });
   }, []);
   return (
@@ -31,11 +39,11 @@ useEffect(() => {
         </div>
       </div>
       <div className='flex items-center px-24 py-20'>
-        <div data-aos="fade-right"><img src={Compliance} alt="" /></div>
-        <div data-aos="fade-right"><img src={DATA} alt="" /></div>
+        <div data-aos="fade-right" data-aos-delay="200"><img src={Compliance} alt="" /></div>
+        <div data-aos="fade-right" data-aos-delay="100"><img src={DATA} alt="" /></div>
         <div><img src={YourAgent} alt="" /></div>
-        <div data-aos="fade-left"><img src={Legal} alt="" /></div>
-        <div data-aos="fade-left"><img src={Marketing} alt="" /></div>
+        <div data-aos="fade-left" data-aos-delay="100"><img src={Legal} alt="" /></div>
+        <div data-aos="fade-left" data-aos-delay="200"><img src={Marketing} alt="" /></div>
       </div>
     </>
   )
