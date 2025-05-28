@@ -8,13 +8,13 @@ import Join from '../assets/join.png'
 function Footer() {
   return (
     <div className='bg-[#f9f9f9] pt-[60px] pb-8 px-10'>
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-[50px]">
         {/*col*/}
         <div>
           <img src={Logo} alt="logo" className='w-[300px]' />
         </div>
         {/*col*/}
-        <div className='grid grid-cols-2'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-y-[50px]'>
           {/*col*/}
           <div className='flex flex-col gap-6'>
             <div className='text-[#202020] font-bold'>Connect with us</div>

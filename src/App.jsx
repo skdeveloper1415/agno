@@ -8,6 +8,7 @@ import DATA from '../src/assets/2.png';
 import YourAgent from '../src/assets/3.png';
 import Legal from '../src/assets/4.png';
 import Marketing from '../src/assets/5.png';
+import ScalingSection from './components/ScalingSection'
 
 function App() {
 useEffect(() => {
@@ -38,12 +39,13 @@ useEffect(() => {
             <a href='' className='border border-[#e0e0e0] p-2 rounded-lg'><span className='bg-[#FF4017] text-white font-light px-2 py-1 rounded-4xl'>TRY DEMO</span></a>
         </div>
       </div>
-      <div className='flex items-center px-24 py-20'>
-        <div data-aos="fade-right" data-aos-delay="200"><img src={Compliance} alt="" /></div>
-        <div data-aos="fade-right" data-aos-delay="100"><img src={DATA} alt="" /></div>
-        <div><img src={YourAgent} alt="" /></div>
-        <div data-aos="fade-left" data-aos-delay="100"><img src={Legal} alt="" /></div>
-        <div data-aos="fade-left" data-aos-delay="200"><img src={Marketing} alt="" /></div>
+      <div className='flex items-center px-24 py-20 scroll-container'>
+        <ScalingSection />
+        {/* <div className='slide'><img src={Compliance} alt="" /></div>
+        <div className='slide'><img src={DATA} alt="" /></div>
+        <div className='slide'><img src={YourAgent} alt="" /></div>
+        <div className='slide'><img src={Legal} alt="" /></div>
+        <div className='slide'><img src={Marketing} alt="" /></div> */}
       </div>
     </>
   )

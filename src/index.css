@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@font-face {
+    font-family: 'OffBit';
+    src: url('./assets/font/OffBit-DotBold.woff2') format('woff2'),
+        url('./assets/font/OffBit-DotBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -83,11 +91,33 @@ button:focus-visible {
   letter-spacing: -.054rem;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--background-color--background-primary);
-  font-family: "Monoton", sans-serif;
+  font-family: 'OffBit';
   font-weight: 400;
   font-style: normal;
-  line-height:normal;
+  line-height:120px;
 }
+.scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  flex: none;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background: #f0f0f0;
+  transition: transform 0.5s ease;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

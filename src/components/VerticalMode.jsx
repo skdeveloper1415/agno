@@ -16,7 +16,7 @@ function VerticalMode() {
   };
   return (
     <div className="slider-container w-full">
-      <Slider {...settings} className='w-full text-center text-2xl lg:text-[70px]'>
+      <Slider {...settings} className='w-full text-center text-2xl lg:text-[100px]'>
         <div>
           <h3>model agnostic</h3>
         </div>
